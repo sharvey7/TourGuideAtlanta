@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Tour Guide Atlanta</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="food">Food Places</string>
+    <string name="museums">Museums</string>
+    <string name="attractions">Attractions</string>
+    <string name="tours">Tour Guide</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="atlPlaces">
+        <item>Piedmont Park</item>
+        <item>Ponce City Market</item>
+        <item>Georgia Aquariam</item>
+        <item>World of Coca-Cola </item>
+        <item>Fox Theatre</item>
+    </string-array>
+
+    <string-array name="fun">
+        <item>Atlanta’s Southern Food Tour</item>
+        <item>Walking Dead Big Zombie Tour 1</item>
+        <item>CNN Atlanta Studio Tour</item>
+        <item>Atlanta city tour by electric car</item>
+        <item>Atlanta Historical Homes Tour</item>
+    </string-array>
+
+    <string-array name="art">
+        <item>High Museum of Art</item>
+        <item>Center for Civil and Human Rights</item>
+        <item>Fernbank Museum of Natural History</item>
+        <item>Jimmy Carter Library and Museum </item>
+        <item>Atlanta History Center </item>
+    </string-array>
+
+    <string-array name="food">
+        <item>Aria</item>
+        <item>Mary Mac</item>
+        <item>Vortex</item>
+        <item>Antico Pizza</item>
+        <item>Cakes and Ale</item>
+
+    </string-array>
+</resources>
