@@ -43,7 +43,8 @@ public class MuseumsFragment extends ListFragment implements AdapterView.OnItemC
     public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
         String[] atlPlaces= getActivity().getResources().getStringArray(R.array.art);
 
-        Toast.makeText(getActivity(), "Places in Atl :"+ atlPlaces[position], Toast.LENGTH_LONG).show();
+        Toast.makeText(getActivity(), "Popular museums in Atlanta :"+ atlPlaces[position],
+                Toast.LENGTH_LONG).show();
     }
 }
 

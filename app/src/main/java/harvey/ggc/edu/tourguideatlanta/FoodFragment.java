@@ -20,11 +20,16 @@ import java.util.HashMap;
 
 public class FoodFragment extends ListFragment implements AdapterView.OnItemClickListener {
 
+
+
+    public FoodFragment() {
+      //Required empty public constructor
+    }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState){
-        View view = inflater.inflate(R.layout.fragment_food, container, false );
-        return view;
+        View rootView = inflater.inflate(R.layout.fragment_food, container, false );
+        return rootView;
     }
 
     @Override
@@ -47,7 +52,8 @@ public class FoodFragment extends ListFragment implements AdapterView.OnItemClic
     public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
 
         String[] food = getActivity().getResources().getStringArray(R.array.food);
-        Toast.makeText(getActivity(), "These are the food places" + food[position], Toast.LENGTH_LONG).show();
+        Toast.makeText(getActivity(), "These are the food places in Atlanta: " + food[position],
+                Toast.LENGTH_LONG).show();
     }
 }
 

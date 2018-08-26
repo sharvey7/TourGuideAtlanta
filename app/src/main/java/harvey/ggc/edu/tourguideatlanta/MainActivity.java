@@ -5,6 +5,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -23,11 +24,10 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-        android.support.v4.app.FragmentTransaction fragmentTransaction;
+    android.support.v4.app.FragmentTransaction fragmentTransaction;
 
-      //  private MyAdapter myAdapter;
-       // private ListView listView;
-
+    //  private MyAdapter myAdapter;
+    // private ListView listView;
 
 
     @Override
@@ -36,10 +36,11 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        //setSupportActionBar(toolbar);
 
-       // myAdapter = new MyAdapter(this);
+        // myAdapter = new MyAdapter(this);
 
+        SimpleFragmentPagerAdapter adapter = new SimpleFragmentPagerAdapter(getSupportFragmentManager());
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -49,6 +50,8 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
 
     }
 
@@ -95,80 +98,36 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.foodFragment) {
             // Handle the camera action
             fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.screen_layout, new FoodFragment ());
-            getSupportActionBar().setTitle("Food");
+            fragmentTransaction.replace(R.id.screen_layout, new FoodFragment());
+            //getSupportActionBar().setTitle("Food");
             fragmentTransaction.commit();
-
 
 
         } else if (id == R.id.attractionsFragment) {
             fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.screen_layout, new AttractionsFragment());
-            getSupportActionBar().setTitle("Attractions!");
+           // getSupportActionBar().setTitle("Attractions!");
             fragmentTransaction.commit();
 
         } else if (id == R.id.musemsFragment) {
-          fragmentTransaction = getSupportFragmentManager().beginTransaction();
-          fragmentTransaction.replace(R.id.screen_layout, new MuseumsFragment());
-          getSupportActionBar().setTitle("Museums");
-          fragmentTransaction.commit();
+            fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.screen_layout, new MuseumsFragment());
+           // getSupportActionBar().setTitle("Museums");
+            fragmentTransaction.commit();
 
 
         } else if (id == R.id.tourFragment) {
             fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.screen_layout, new TourFragment());
-            getSupportActionBar().setTitle("Tour Guides of Atlanta");
+           // getSupportActionBar().setTitle("Tour Guides of Atlanta");
             fragmentTransaction.commit();
 
 
-
-    }
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
-   /* //array
-    class MyAdapter extends BaseAdapter{
-        private Context context;
-        String[] fun;
-        int[] images = {R.drawable.food, R.drawable.scary, R.drawable.cnn,
-                R.drawable.electric, R.drawable.house};
-        public MyAdapter(Context context){
-            this.context= context;
-            fun = context.getResources().getStringArray(R.array.fun);
-        }
-        @Override
-        public int getCount() {
-            return fun.length;
-        }
-
-        @Override
-        public Object getItem(int position) {
-            return fun[position];
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return position;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-          View row = null;
-            if(convertView == null){
-                LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                row = inflater.inflate(R.layout.custom_row, parent, false);
-            }
-            else{
-             row = convertView;
-            }
-            TextView titleTextView = row.findViewById(R.id.textView1);
-            ImageView titleImageView = row.findViewById(R.id.image1);
-            titleTextView.setText(fun[position]);
-            titleImageView.setImageResource(images[position]);
-            return row;
-        }*/
-    }
+}
 

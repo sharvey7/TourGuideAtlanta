@@ -5,15 +5,22 @@
     android:layout_height="match_parent"
     tools:context=".TourFragment">
 
+   <TextView
+       android:paddingTop="30dp"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text=""
+       android:gravity="end"
+       />
 
-    <fragment
-        android:id="@+id/fragment3"
-        android:paddingTop="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        class="harvey.ggc.edu.tourguideatlanta.TourFragment">
 
-    </fragment>
+   <ListView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:paddingTop="20dp"
+       android:id="@+id/android:list">
+
+   </ListView>
 
 
 </LinearLayout>

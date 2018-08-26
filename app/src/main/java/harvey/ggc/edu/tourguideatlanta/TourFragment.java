@@ -18,7 +18,6 @@ import java.lang.reflect.Array;
 public class TourFragment extends ListFragment implements AdapterView.OnItemClickListener {
 
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -43,8 +42,7 @@ public class TourFragment extends ListFragment implements AdapterView.OnItemClic
 
         String[] fun = getActivity().getResources().getStringArray(R.array.fun);
 
-        Toast.makeText(getActivity(), "Places in Atl :"+ fun[position], Toast.LENGTH_LONG).show();
+        Toast.makeText(getActivity(), "The popular tours :"+ fun[position],
+                Toast.LENGTH_LONG).show();
     }
 }
-
-

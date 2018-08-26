@@ -3,16 +3,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:a="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     tools:context=".FoodFragment">
 
-    <fragment
-        android:id="@+id/fragment2"
-        android:paddingTop="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        class="harvey.ggc.edu.tourguideatlanta.FoodFragment">
+    <TextView
+        android:paddingTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:gravity="end"
+        />
 
-    </fragment>
+
+
+
+  <ListView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:id="@+id/android:list">
+
+  </ListView>
 
 
 
